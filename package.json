@@ -8,7 +8,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "format": "npx prettier --write ./src",
-    "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx"
+    "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "reset": "rm -rf node_modules && rm -rf package-lock.json && npx expo install",
+    "restart": "npm run reset && npm run start",
+    "clearCache": "npx expo start --clear"
   },
   "dependencies": {
     "expo": "~49.0.15",
