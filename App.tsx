@@ -1,10 +1,12 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import Root from "@/Root";
+import themes from "@/themes";
+import { ThemeProvider } from "@shopify/restyle";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
 import React, { useCallback } from "react";
+import { useColorScheme } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import Root from "@/Root";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,10 +31,12 @@ const App = () => {
   }
 
   return (
-    <SafeAreaProvider onLayout={onLayoutRootView}>
-      <StatusBar style="auto" />
-      <Root />
-    </SafeAreaProvider>
+    <ThemeProvider theme={themes["light"]}>
+      <SafeAreaProvider onLayout={onLayoutRootView}>
+        <StatusBar style="auto" />
+        <Root />
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 };
 
