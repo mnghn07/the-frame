@@ -1,22 +1,16 @@
 import { createTheme } from "@shopify/restyle";
-
-const palette = {
-  purpleLight: "#8C6FF7",
-  purplePrimary: "#5A31F4",
-  purpleDark: "#3F22AB",
-
-  greenLight: "#56DCBA",
-  greenPrimary: "#0ECD9D",
-  greenDark: "#0A906E",
-
-  black: "#0B0B0B",
-  white: "#F0F2F3"
-};
+import { palette } from "./palette";
 
 const theme = createTheme({
   colors: {
-    mainBackground: palette.white,
-    cardPrimaryBackground: palette.purplePrimary
+    primaryBackground: palette.white,
+    primaryText: palette.black,
+    secondaryBackground: palette.black,
+    secondaryText: palette.white,
+    cardBackground: palette.white,
+    cardText: palette.black,
+    buttonBackground: palette.black,
+    buttonText: palette.white
   },
   spacing: {
     s: 8,
@@ -36,8 +30,24 @@ const theme = createTheme({
     defaults: {
       // We can define a default text variant here.
     }
+  },
+  buttonVariants: {
+    primary: {
+      backgroundColor: "buttonBackground",
+      color: "buttonText"
+    },
+    secondary: {
+      backgroundColor: "secondaryBackground",
+      color: "secondaryText"
+    }
+  },
+  cardVariants: {
+    primary: {
+      backgroundColor: "cardBackground",
+      color: "cardText"
+    }
   }
 });
 
-export type Theme = typeof theme;
+export type LightTheme = typeof theme;
 export default theme;
