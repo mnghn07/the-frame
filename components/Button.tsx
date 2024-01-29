@@ -1,5 +1,3 @@
-import Text from "@/components/atoms/Text";
-import { Theme } from "@/themes";
 import {
   BackgroundColorProps,
   BorderProps,
@@ -11,8 +9,10 @@ import {
   spacing,
   useRestyle
 } from "@shopify/restyle";
+import Text from "components/atoms/Text";
 import React from "react";
 import { TouchableOpacity } from "react-native";
+import { Theme } from "themes";
 
 type RestyleProps = SpacingProps<Theme> &
   BorderProps<Theme> &

@@ -1,4 +1,3 @@
-import { Theme } from "@/themes";
 import {
   createRestyleComponent,
   createVariant,
@@ -7,6 +6,7 @@ import {
   VariantProps
 } from "@shopify/restyle";
 import React from "react";
+import { Theme } from "themes";
 
 type Props = SpacingProps<Theme> & VariantProps<Theme, "cardVariants">;
 const Card = createRestyleComponent<Props, Theme>([

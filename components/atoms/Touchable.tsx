@@ -1,12 +1,11 @@
-import { Theme } from "@/themes";
 import { createBox } from "@shopify/restyle";
 import React from "react";
 import {
   Pressable as NativePressable,
   PressableProps as NativePressableProps,
-  Platform,
   TouchableOpacity
 } from "react-native";
+import { Theme } from "themes";
 
 const Pressable = createBox<Theme, NativePressableProps>(NativePressable);
 type PressableProps = React.ComponentProps<typeof Pressable>;

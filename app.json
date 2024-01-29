@@ -29,6 +29,8 @@
         "projectId": "78019607-01cb-444b-9571-89c5f0fc1aba"
       }
     },
-    "owner": "m.nghn"
+    "owner": "m.nghn",
+    "plugins": ["expo-router"],
+    "scheme": "the-frame"
   }
 }

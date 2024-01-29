@@ -1,6 +1,6 @@
-import { Theme } from "@/themes";
 import { createText } from "@shopify/restyle";
 import React from "react";
+import { Theme } from "themes";
 
 const Text = createText<Theme>();
 
