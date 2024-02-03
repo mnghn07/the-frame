@@ -36,10 +36,7 @@ export default function RootLayout() {
       <SafeAreaProvider onLayout={onLayoutRootView}>
         <StatusBar style="auto" />
         <Stack>
-          <Stack.Screen name="home" options={{ headerShown: false }} />
-          {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-          {/* <Stack.Screen name="(auth)" options={{ headerShown: false }} /> */}
-
+          <Stack.Screen name="(home)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: "modal" }} />
         </Stack>
       </SafeAreaProvider>

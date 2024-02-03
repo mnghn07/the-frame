@@ -9,9 +9,9 @@
     "web": "expo start --web",
     "format": "npx prettier --write ./src",
     "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "reset": "rm -rf node_modules && rm -rf package-lock.json && npx expo install",
-    "restart": "npm run reset && npm run start",
-    "clear": "npx expo start -c"
+    "clear": "rm -rf node_modules && rm -rf package-lock.json && npx expo install",
+    "restart": "npm run clear && npm run reset",
+    "reset": "npx expo start -c"
   },
   "dependencies": {
     "@shopify/restyle": "^2.4.2",

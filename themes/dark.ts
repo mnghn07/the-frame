@@ -30,6 +30,11 @@ const theme = createTheme({
     largeTablet: 1024
   },
   textVariants: {
+    defaults: {
+      fontSize: 16,
+
+      color: "$primaryText"
+    },
     header: {
       fontSize: 34
     },

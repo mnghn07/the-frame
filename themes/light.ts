@@ -19,6 +19,10 @@ const theme = createTheme({
     xl: 40
   },
   textVariants: {
+    defaults: {
+      fontSize: 16,
+      color: "$primaryText"
+    },
     header: {
       fontWeight: "bold",
       fontSize: 34
