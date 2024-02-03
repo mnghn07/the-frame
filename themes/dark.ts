@@ -32,8 +32,7 @@ const theme = createTheme({
   textVariants: {
     defaults: {
       fontSize: 16,
-
-      color: "$primaryText"
+      color: "primaryText"
     },
     header: {
       fontSize: 34
@@ -41,9 +40,6 @@ const theme = createTheme({
     body: {
       fontSize: 16,
       lineHeight: 24
-    },
-    defaults: {
-      // We can define a default text variant here.
     }
   },
   buttonVariants: {
