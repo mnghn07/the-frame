@@ -5,5 +5,5 @@
     "source.sortImports": "explicit",
     "source.sortMembers": "explicit"
   },
-  "cSpell.words": ["Pressable"]
+  "cSpell.words": ["Pressable", "zustand"]
 }
