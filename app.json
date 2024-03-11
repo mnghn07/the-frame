@@ -29,8 +29,24 @@
         "projectId": "78019607-01cb-444b-9571-89c5f0fc1aba"
       }
     },
+
     "owner": "m.nghn",
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Montserrat-Regular.ttf",
+            "./assets/fonts/Montserrat-SemiBold.ttf",
+            "./assets/fonts/Montserrat-Bold.ttf",
+            "./assets/fonts/Montserrat-Italic.ttf",
+            "./assets/fonts/Montserrat-Light.ttf",
+            "./assets/fonts/Montserrat-Medium.ttf"
+          ]
+        }
+      ]
+    ],
     "scheme": "the-frame"
   }
 }

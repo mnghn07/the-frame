@@ -13,7 +13,12 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded, error] = useFonts({
-    Montserrat: require("../assets/fonts/Montserrat-Regular.ttf")
+    MontserratRegular: require("@/assets/fonts/Montserrat-Regular.ttf"),
+    MontserratSemiBold: require("@/assets/fonts/Montserrat-SemiBold.ttf"),
+    MontserratBold: require("@/assets/fonts/Montserrat-Bold.ttf"),
+    MontserratItalic: require("@/assets/fonts/Montserrat-Italic.ttf"),
+    MontserratMedium: require("@/assets/fonts/Montserrat-Medium.ttf"),
+    MontserratLight: require("@/assets/fonts/Montserrat-Light.ttf")
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.

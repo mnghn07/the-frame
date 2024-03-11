@@ -20,12 +20,13 @@ const theme = createTheme({
   },
   textVariants: {
     defaults: {
-      fontSize: 16,
+      fontSize: 14,
+      fontFamily: "MontserratRegular",
       color: "primaryText"
     },
     header: {
-      fontWeight: "bold",
-      fontSize: 34
+      fontSize: 14,
+      fontFamily: "MontserratBold"
     },
     body: {
       fontSize: 16,
