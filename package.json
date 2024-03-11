@@ -1,6 +1,13 @@
 {
   "name": "the-frame",
-  "version": "1.0.0",
+  "description": "This is a simple project template for Expo",
+  "displayName": "The Frame",
+  "author": {
+    "name": "Minh Nguyen",
+    "email": "ngh.nhatminh0712@gmail.com",
+    "url": "https://github.com/mnghn07"
+  },
+  "version": "0.1.0",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
