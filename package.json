@@ -73,11 +73,10 @@
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
     ]
   },
-  "private": true,
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org/",
     "tag": "expo"
   },
-  "repository": "https://github.com/mnghn07/the-frame"
+  "repository": "https://github.com/mnghn07/the-frame.git"
 }
