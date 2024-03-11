@@ -1,12 +1,8 @@
 {
-  "name": "the-frame",
+  "name": "@mngh12/the-frame",
   "description": "This is a simple project template for Expo",
   "displayName": "The Frame",
-  "author": {
-    "name": "Minh Nguyen",
-    "email": "ngh.nhatminh0712@gmail.com",
-    "url": "https://github.com/mnghn07"
-  },
+  "author": "Minh Nguyen <ngh.nhatminh0712@gmail.com> (https://github.com/mnghn07)",
   "version": "0.1.0",
   "main": "expo-router/entry",
   "scripts": {
@@ -78,5 +74,17 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "expo"
   },
-  "repository": "https://github.com/mnghn07/the-frame.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnghn07/the-frame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mnghn07/the-frame/issues"
+  },
+  "homepage": "https://github.com/mnghn07/the-frame#readme",
+  "keywords": [
+    "expo",
+    "template"
+  ],
+  "license": "ISC"
 }
