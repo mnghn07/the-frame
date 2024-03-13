@@ -1,71 +1,99 @@
-# React Native Expo Template
+# The Frame (Expo)
 
-This repository serves as a boilerplate for kickstarting React Native projects using the Expo framework. Expo allows you to develop React Native applications without the need for complex setup and configuration, providing a streamlined development experience.
+Serves as a boilerplate for kickstarting React Native projects using the Expo framework.
+
+## Roadmap
+
+Some intended in-progress features include:
+
+| Idx | Feature                                                    | Progress |
+| --- | ---------------------------------------------------------- | -------- |
+| 1   | React Navigation structure                                 | WIP      |
+| 2   | Adds deployment configuration, Expo-updates,... (WIP)      | WIP      |
+| 3   | Grants freedom of choice so that user can customize fully. | WIP      |
+
+Feel free to submit to recommend more features. Thanks!
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have Node.js and npm installed on your machine. Additionally, you'll need the Expo CLI, which can be installed globally using the following command:
-
-bashCopy code
-
-`npm install -g expo-cli`
+Make sure you have [Node.js](https://nodejs.org/en) and [npm](https://www.npmjs.com/package/npm) installed on your machine. Additionally, you might need to install [Expo CLI](https://docs.expo.dev/get-started/installation/) for better setup.
 
 ### Installation
 
-1. Clone this repository to your local machine:
+1. Using Expo commands, add this template to the command:
 
-bashCopy code
+```bash
+npx create-expo-app@latest <your-project-name> --template @mngh12/the-frame
+```
 
-`git clone https://github.com/your-username/react-native-expo-template.git`
+2. Navigate to the project directory:
 
-1. Navigate to the project directory:
+```bash
+cd <your-project-name>
+```
 
-bashCopy code
+3. Install dependencies:
 
-`cd react-native-expo-template`
+```bash
+npm install
+```
 
-1. Install dependencies:
+or
 
-bashCopy code
-
-`npm install`
+```bash
+yarn install
+```
 
 ### Running the App
 
 Start the Expo development server:
 
-bashCopy code
+```bash
+npm run ios
+```
 
-`npm start`
+or
 
-This will open the Expo DevTools in your default web browser. You can then run the app on an emulator or a physical device by following the instructions in the Expo DevTools.
+```bash
+npm run android
+```
+
+And let the magic happens!
 
 ## Project Structure
 
 The project structure is designed to provide a clear organization of code. Here's an overview:
 
-- assets: Store static assets like images, fonts, etc.
-- components: Reusable React components.
-- navigation: Navigation setup and configuration.
-- screens: React components representing different screens of the app.
-- services: Services, utilities, and API-related code.
-- theme: Styling and theming configuration.
+- **assets**: Store static assets like images, fonts, etc.
+- **components**: Reusable components, please add more!
+- **app**: Main screen components of the app. Since we're using [Expo Router](https://docs.expo.dev/router/introduction/), which is a file-based router for React-Native and web applications, we don't have navigation folder setting up here. (we'll try to bring back navigation in future releases). And oh yeah, it's still native navigation baby!
+- **stores**: Contains 3 small chunks:
+  - api: Contains all api-related code. Axios, interceptors, middlewares should be in here.
+  - client: Contains client state management, separated from server state. We're using [zustand](https://github.com/pmndrs/zustand) as our default libraries. Feel free to uninstall and install others.
+  - server: Contains server state management, separated from client state. We're using [React Query](https://tanstack.com/query/latest/docs/framework/react/react-native) (and we cannot recommend enough).
+  - models: type-declaring goes this way.
+- **themes**: Styling and theming configuration.
+- **utils**: App-related constants.
 
 Feel free to modify and extend the structure based on the needs of your project.
 
 ## Features
 
 - Expo Ecosystem: Leverage the power of Expo for a simplified React Native development experience.
-- Navigation: Setup with React Navigation for easy navigation between screens.
+- Navigation: Setup with Expo Router for easy navigation between screens.
 - Theme Configuration: Customize the app's theme and styling from the centralized theme file.
 - Component Reusability: Utilize reusable components to maintain a modular codebase.
 - Sample Screens: Includes example screens to help you get started quickly.
 
 ## Contributing
 
-If you'd like to contribute, please follow the [contribution guidelines](https://chat.openai.com/c/CONTRIBUTING.md) in this repository.
+If you'd like to contribute, please follow the [contribution guidelines](CONTRIBUTING.md) in this repository.
+
+## Code of Conduct
+
+Please check out the [Code of Conduct](CODE_OF_CONDUCT.md) file for more information.
 
 ## License
 
