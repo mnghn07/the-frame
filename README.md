@@ -1,3 +1,5 @@
+<img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1768020/32dc375db841e7da934da0fb037e02686279d399.png" />
+
 # The Frame (Expo)
 
 Serves as a boilerplate for kickstarting React Native projects using the Expo framework.
