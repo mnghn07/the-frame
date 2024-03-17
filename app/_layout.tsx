@@ -3,8 +3,9 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
+import * as Updates from "expo-updates";
 import React, { useCallback, useEffect } from "react";
-import { useColorScheme } from "react-native";
+import { Alert, useColorScheme } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import themes from "themes";
 
@@ -21,12 +22,26 @@ export default function RootLayout() {
     MontserratLight: require("@/assets/fonts/Montserrat-Light.ttf")
   });
 
+  const onFetchUpdateAsync = async () => {
+    try {
+      const update = await Updates.checkForUpdateAsync();
+
+      if (update.isAvailable) {
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      }
+    } catch (err: any) {
+      // You can also add an alert() to see the error message in case of an error when fetching updates.
+      Alert.alert(`Error fetching latest Expo update: ${err}`);
+    }
+  };
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
 
   const onLayoutRootView = useCallback(async () => {
+    await onFetchUpdateAsync();
     if (loaded) {
       await SplashScreen.hideAsync();
     }

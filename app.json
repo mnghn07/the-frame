@@ -2,7 +2,7 @@
   "expo": {
     "name": "the-frame",
     "slug": "the-frame",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -30,7 +30,7 @@
       }
     },
 
-    "owner": "m.nghn",
+    "owner": "<your-expo-username>",
     "plugins": [
       "expo-router",
       [
@@ -44,6 +44,12 @@
             "./assets/fonts/Montserrat-Light.ttf",
             "./assets/fonts/Montserrat-Medium.ttf"
           ]
+        }
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "<your-expo-username>"
         }
       ]
     ],
