@@ -16,7 +16,8 @@
     "restart": "npm run clear && npm run reset",
     "reset": "npx expo start -c",
     "test": "jest",
-    "update": "./scripts/check-for-updates.sh"
+    "update": "./scripts/check-for-updates.sh",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "@shopify/restyle": "^2.4.2",
@@ -87,5 +88,8 @@
     "expo",
     "template"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "resolutions": {
+    "semver": "7.5.3"
+  }
 }

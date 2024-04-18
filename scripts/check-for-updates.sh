@@ -13,7 +13,5 @@ require node
 require npm
 require expo
 
-echo " 📦  Installing Expo CLI..."
-npm install -g expo-cli
 echo " 📦  Installing Expo dependencies..."
 npx expo install
