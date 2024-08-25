@@ -1,13 +1,13 @@
+import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "@shopify/restyle";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import * as Updates from "expo-updates";
-import React, { useCallback, useEffect } from "react";
-import { Alert, useColorScheme } from "react-native";
+import React from "react";
+import { useColorScheme } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import themes from "themes";
+import Root from "./Root";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -22,26 +22,12 @@ export default function RootLayout() {
     MontserratLight: require("@/assets/fonts/Montserrat-Light.ttf")
   });
 
-  const onFetchUpdateAsync = async () => {
-    try {
-      const update = await Updates.checkForUpdateAsync();
-
-      if (update.isAvailable) {
-        await Updates.fetchUpdateAsync();
-        await Updates.reloadAsync();
-      }
-    } catch (err: any) {
-      // You can also add an alert() to see the error message in case of an error when fetching updates.
-      Alert.alert(`Error fetching latest Expo update: ${err}`);
-    }
-  };
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
+  React.useEffect(() => {
     if (error) throw error;
   }, [error]);
 
-  const onLayoutRootView = useCallback(async () => {
-    await onFetchUpdateAsync();
+  const onLayoutRootView = React.useCallback(async () => {
     if (loaded) {
       await SplashScreen.hideAsync();
     }
@@ -50,15 +36,13 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-
   return (
     <ThemeProvider theme={colorScheme === "dark" ? themes.dark : themes.light}>
       <SafeAreaProvider onLayout={onLayoutRootView}>
         <StatusBar style="auto" />
-        <Stack>
-          <Stack.Screen name="(home)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-        </Stack>
+        <NavigationContainer independent>
+          <Root />
+        </NavigationContainer>
       </SafeAreaProvider>
     </ThemeProvider>
   );

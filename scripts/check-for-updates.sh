@@ -15,3 +15,5 @@ require expo
 
 echo " 📦  Installing Expo dependencies..."
 npx expo install
+echo " 📦  Checking for outdated packages..."
+npm outdated
