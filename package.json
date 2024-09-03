@@ -17,9 +17,11 @@
     "reset": "npx expo start -c",
     "test": "jest",
     "update": "./scripts/check-for-updates.sh",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "create-screen": "./scripts/create-screen.sh"
   },
   "dependencies": {
+    "@react-navigation/native-stack": "^6.11.0",
     "@react-navigation/stack": "^6.4.1",
     "@shopify/restyle": "^2.4.4",
     "axios": "^1.7.5",

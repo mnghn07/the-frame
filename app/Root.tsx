@@ -1,14 +1,11 @@
-import HomeScreen from "@/screens/Home/HomeScreen";
-import SettingsScreen from "@/screens/Settings/SettingsScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import { useFonts } from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
 import React from "react";
-import { useColorScheme } from "react-native";
+import AuthStack from "./stacks/AuthNavigator";
+import UnAuthStack from "./stacks/UnauthNavigator";
 
 export type RootStackParamsList = {
-  Home: undefined;
-  modal: undefined;
+  Auth: undefined;
+  UnAuth: undefined;
 };
 
 const Stack = createStackNavigator();
@@ -17,9 +14,14 @@ const Root = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name="Auth"
         options={{ headerShown: false }}
-        component={HomeScreen}
+        component={AuthStack}
+      />
+      <Stack.Screen
+        name="UnAuth"
+        options={{ headerShown: false }}
+        component={UnAuthStack}
       />
     </Stack.Navigator>
   );
